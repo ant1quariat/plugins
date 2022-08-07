@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.elemUnset{
+    display: none !important;
+}
+input[class], textarea[class],
+button[class], a[class] {
+    outline: unset;
+}
+
+a[class]{
+    text-decoration: unset;
+    color: black;
+}
+
+body {
+    min-height: 100vh;
+    /*overflow: hidden;*/
+    width: 1280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("../Img/Background.png") no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: repeat(13, 80px);
+    grid-column-gap: 20px;
+}
+
+.header-component{
+    grid-column-start: 1;
+    grid-column-end: 14;
+
+    background-color: white;
+    height: 50px;
+
+}
+
+.header-block{
+    display: grid;
+    grid-template-columns: repeat(12, 80px);
+    grid-template-rows: 15px 20px 15px;
+
+}
+
+.site-logo{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 2 / 2;
+}
+
+.menu-site{
+    grid-column-start: 11;
+    grid-column-end: 14;
+    grid-row: 2 / 2;
+}
+.menu-link{
+    margin-right: 10px;
+}
+.menu-link:last-child{
+    margin-right: unset;
+}
+.menu-link:hover{
+    color: #07BB07;
+    border-bottom: 2px solid #07BB07;
+}
+.menu-link:active{
+    color: #00fa00;
+    border-bottom: 2px solid #07BB07;
+}
+.menu-link:focus,
+.menu-link-active{
+    color: #07BB07;
+    border-bottom: 2px solid #07BB07;
+}
+
+.content-component{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+}
+
+.content-block{
+    margin-top: 35px;
+
+    width: 1180px;
+    height: 600px;
+
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.35);
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-text{
+    padding: 10px 35px;
+    color: #e0dcdc
+}
+.content-text > .content-text-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.content-text-about + .content-text-about{
+    margin-top: 15px;
+}
+.text-about-list{
+    margin-left: 30px;
+}
+
+.content-bar{
+    margin: 15px 50px 15px;
+}
+
+.bar-menu{
+    width: 180px;
+    height: 250px;
+
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px 15px 5px 5px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.bar-menu > .menu-block{
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px 10px 25px;
+}
+
+.bar-menu > .bar-menu-title{
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 20px;
+
+    padding: 10px 35px;
+}
+
+.menu-block > .bar-link-list{
+    padding: 0 5px 0 5px;
+}
+
+.bar-link{
+    margin-bottom: 5px;
+}
+
+.bar-link:hover{
+    text-decoration: underline;
+    color: #25AA0F;
+}
+
+.bar-link-active{
+    text-decoration: underline !important;
+    color: #25AA0F !important;
+}
+
+.bar-link-list > .bar-link::before{
+    content: '•';
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.bar-info{
+    margin-top: 14px;
+
+    width: 179px;
+    height: 140px;
+
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px 5px 15px 15px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+
+    padding: 10px 15px;
+
+    position: relative;
+}
+
+.bar-info> .bar-info-title{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 20px;
+
+    margin-bottom: 5px;
+}
+
+.bar-info> .bar-info-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.btn-buy{
+    border: 1px solid #25AA0F;
+    border-radius: 5px;
+
+    background-color: #25AA0F;
+
+    padding: 5px 7px;
+
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    bottom: 10px;
+
+    font-weight: 600;
+}
+.btn-buy:hover,
+.btn-buy:focus{
+    color: #c6f8b4;
+    background-color: #6fb04e;
+}
+.btn-buy:active{
+    color: #9fbb93;
+}
+.content-videos{
+    width: 602px;
+    height: 340px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    margin-top: 15px;
+
+}
